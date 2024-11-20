@@ -1,0 +1,11 @@
+packages:
+  - protocol
+  - server
+  - frontend
+  - client
+  - tracker-list
+  - corium
+  - Ultraviolet
+  - Dynamic
+  - bare-client-custom
+  - tracker

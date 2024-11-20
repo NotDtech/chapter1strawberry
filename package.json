@@ -1,0 +1,61 @@
+{
+  "name": "@mercuryworkshop/adrift",
+  "version": "1.0.4",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "workspaces": [
+    "protocol",
+    "client"
+  ],
+
+  "exports": {
+    "./protocol": {
+      "types": "./dist/protocol/index.d.ts",
+      "node": {
+        "require": "./dist/protocol.cjs",
+        "import": "./dist/protocol.mjs"
+      },
+      "browser": {
+        "require": "./dist/protocol.cjs",
+        "import": "./dist/protocol.mjs"
+      }
+    },
+    "./client": {
+      "types": "./dist/client/index.d.ts",
+      "node": {
+        "require": "./dist/client.cjs",
+        "import": "./dist/client.mjs"
+      },
+      "browser": {
+        "require": "./dist/client.cjs",
+        "import": "./dist/client.mjs"
+      }
+    },
+    "./tracker-list": {
+      "node": {
+        "require": "./dist/tracker-list.cjs",
+        "import": "./dist/tracker-list.mjs"
+      },
+      "browser": {
+        "require": "./dist/tracker-list.cjs",
+        "import": "./dist/tracker-list.mjs"
+      }
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.19.2",
+    "esbuild-plugin-d.ts": "^1.1.0",
+    "estrella": "^1.4.1",
+    "tsc": "^2.0.4"
+  },
+  "dependencies": {
+    "node-pre-gyp": "^0.17.0",
+    "websocket": "^1.0.34"
+  }
+}
